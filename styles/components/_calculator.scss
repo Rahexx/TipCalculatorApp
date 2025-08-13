@@ -1,0 +1,12 @@
+.calculator {
+  display: flex;
+  flex-direction: column;
+  gap: $space-32;
+  height: 49.313rem;
+  width: 23.438rem;
+  margin: 0 auto;
+  padding: $space-34 $space-24;
+  background: $white;
+  border-radius: 1.563rem 1.563rem 0 0;
+  box-shadow: 0 32px 43px 0 $shadow-calculator;
+}
