@@ -8,10 +8,7 @@
     border-radius: 0.9375rem;
 
     &__tip, &__total {
-        height: 2.9375rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include section-style(2.9375rem, 0);
     }
 
     &__tip {
@@ -25,37 +22,20 @@
     &__label {
         height: 2.6875rem;
         width: 6.125rem;
-        color: $white;
-        line-height: $line-height-24;
-        font-weight: $font-bold;
-        font-size: $text-16;
+        @include typography($white, $line-height-24, $font-bold, $text-16);
     }
 
     &__person {
-        color: $grey-400;
-        line-height: $line-height-19;
-        font-weight: $font-bold;
-        font-size: $text-13;
+        @include typography($grey-400, $line-height-19, $font-bold, $text-13);
     }
 
     &__value {
-        color: $green-400;
+        @include typography($green-400, inherit, $font-bold, $text-32);
         letter-spacing: $letter-spacing-n-0-67;
-        font-weight: $font-bold;
-        font-size: $text-32;
     }
 
     &__reset {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 3rem;
-        width: 17.5625rem;
-        background: $green-400;
-        color: $green-900;
-        line-height: $line-height-30;
-        font-size: $text-20;
-        font-weight: $font-bold;
-        border-radius: 0.3125rem;
+        @include button-style(3rem, 17.5625rem, $green-400, $green-900, 0.3125rem);
+        @include typography($green-900, $line-height-30, $font-bold, $text-20);
     }
 }

@@ -1,0 +1,33 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin typography($color, $line-height, $font-weight, $font-size) {
+    color: $color;
+    line-height: $line-height;
+    font-weight: $font-weight;
+    font-size: $font-size;
+}
+
+@mixin button-style($height, $width, $background, $color, $border-radius) {
+    @include flex-center;
+    height: $height;
+    width: $width;
+    background: $background;
+    color: $color;
+    border-radius: $border-radius;
+}
+
+@mixin section-style($height, $margin-bottom) {
+    height: $height;
+    @include flex-between;
+    margin-bottom: $margin-bottom;
+}
