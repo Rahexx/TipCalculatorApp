@@ -40,3 +40,5 @@ npm-debug.log*
 Thumbs.db
 
 /css
+main.css.map
+main.css
