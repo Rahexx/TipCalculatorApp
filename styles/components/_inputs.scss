@@ -1,0 +1,82 @@
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: $space-32;
+  padding: 0 $space-8;
+
+  &__bill {
+    display: flex;
+    flex-direction: column;
+    gap: $space-8;
+  }
+
+  &__label {
+    color: $grey-500;
+    font-size: $text-16;
+    font-weight: $font-bold;
+    line-height: $line-height-24;
+  }
+
+  &__input {
+    height: 100%;
+    width: 100%;
+    padding: $space-6 $space-18;
+    text-align: end;
+    background: $grey-50;
+    color: $green-900;
+    line-height: $line-height-36;
+    font-size: $text-24;
+    font-weight: $font-bold;
+  }
+
+  &__container {
+    position: relative;
+    height: 3rem;
+    width: 19.438rem;
+  }
+
+  &__icon {
+    position: absolute;
+    top: $space-16;
+    left: $space-18;
+  }
+
+  &__people--error {
+    display: none;
+  }
+
+  &__tips {
+    display: flex;
+    flex-direction: column;
+
+    &--option {
+      height: 3rem;
+      width: 9.188rem;
+      text-align: center;
+      background: $green-900;
+      border-radius: 0.313rem;
+      color: $white;
+      line-height: $line-height-36;
+      font-size: $text-24;
+      font-weight: $font-bold;
+    }
+
+    &--active {
+      background: $green-400;
+      color: $green-900;
+    }
+
+    &--custom {
+      background: $grey-50;
+      color: $grey-550;
+    }
+  }
+
+  &__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-16;
+    height: 11rem;
+    width: 19.438rem;
+  }
+}
