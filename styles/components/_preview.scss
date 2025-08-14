@@ -1,0 +1,61 @@
+.preview {
+    height: 16.0625rem;
+    width: 20.4375rem;
+    display: flex;
+    flex-direction: column;
+    padding: $space-24;
+    background: $green-900;
+    border-radius: 0.9375rem;
+
+    &__tip, &__total {
+        height: 2.9375rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__tip {
+        margin-bottom: $space-24;
+    }
+
+    &__total {
+        margin-bottom: $space-32;
+    }
+
+    &__label {
+        height: 2.6875rem;
+        width: 6.125rem;
+        color: $white;
+        line-height: $line-height-24;
+        font-weight: $font-bold;
+        font-size: $text-16;
+    }
+
+    &__person {
+        color: $grey-400;
+        line-height: $line-height-19;
+        font-weight: $font-bold;
+        font-size: $text-13;
+    }
+
+    &__value {
+        color: $green-400;
+        letter-spacing: $letter-spacing-n-0-67;
+        font-weight: $font-bold;
+        font-size: $text-32;
+    }
+
+    &__reset {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3rem;
+        width: 17.5625rem;
+        background: $green-400;
+        color: $green-900;
+        line-height: $line-height-30;
+        font-size: $text-20;
+        font-weight: $font-bold;
+        border-radius: 0.3125rem;
+    }
+}
