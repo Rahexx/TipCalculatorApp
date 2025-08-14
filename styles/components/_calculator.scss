@@ -1,12 +1,18 @@
 .calculator {
-  display: flex;
-  flex-direction: column;
-  gap: $space-32;
-  height: 49.313rem;
-  width: 23.438rem;
-  margin: 0 auto;
-  padding: $space-34 $space-24;
-  background: $white;
-  border-radius: 1.563rem 1.563rem 0 0;
-  box-shadow: 0 32px 43px 0 $shadow-calculator;
+    @include flex-column($space-32);
+    height: 49.313rem; // 789px
+    width: 23.438rem; // 375px
+    margin: 0 auto;
+    padding: $space-34 $space-24;
+    background: $white;
+    border-radius: 1.563rem 1.563rem 0 0;
+    box-shadow: 0 32px 43px 0 $shadow-calculator;
+
+    @media (min-width: $breakpoint-tablet) {
+        gap: $space-40;
+        height: 50rem; // 800px
+        width: 38rem; // 608px
+        padding: $space-54 $space-75;
+        border-radius: 1.563rem;
+    }
 }
