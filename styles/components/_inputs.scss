@@ -1,32 +1,18 @@
 .inputs {
-  display: flex;
-  flex-direction: column;
-  gap: $space-32;
+  @include flex-column($space-32);
   padding: 0 $space-8;
 
   &__bill {
-    display: flex;
-    flex-direction: column;
-    gap: $space-8;
+    @include flex-column($space-8);
   }
 
   &__label {
-    color: $grey-500;
-    font-size: $text-16;
-    font-weight: $font-bold;
-    line-height: $line-height-24;
+    @include typography($grey-500, $line-height-24, $font-bold, $text-16);
   }
 
   &__input {
-    height: 100%;
-    width: 100%;
-    padding: $space-6 $space-18;
-    text-align: end;
-    background: $grey-50;
-    color: $green-900;
-    line-height: $line-height-36;
-    font-size: $text-24;
-    font-weight: $font-bold;
+    @include input-style($space-6 $space-18, end, $grey-50, $green-900);
+    @include typography($green-900, $line-height-36, $font-bold, $text-24);
   }
 
   &__container {
@@ -36,9 +22,7 @@
   }
 
   &__icon {
-    position: absolute;
-    top: $space-16;
-    left: $space-18;
+    @include absolute-position($space-16, $space-18);
   }
 
   &__people--error {
@@ -46,19 +30,11 @@
   }
 
   &__tips {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
 
     &--option {
-      height: 3rem;
-      width: 9.188rem;
-      text-align: center;
-      background: $green-900;
-      border-radius: 0.313rem;
-      color: $white;
-      line-height: $line-height-36;
-      font-size: $text-24;
-      font-weight: $font-bold;
+      @include button-option(3rem, 9.188rem, $green-900, $white, 0.313rem);
+      @include typography($white, $line-height-36, $font-bold, $text-24);
     }
 
     &--active {
@@ -73,9 +49,7 @@
   }
 
   &__options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: $space-16;
+    @include flex-wrap($space-16);
     height: 11rem;
     width: 19.438rem;
   }
