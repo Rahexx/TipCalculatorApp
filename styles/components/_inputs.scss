@@ -18,7 +18,7 @@
   &__container {
     position: relative;
     height: 3rem;
-    width: 19.438rem;
+    width: 100%;
   }
 
   &__icon {
@@ -51,6 +51,24 @@
   &__options {
     @include flex-wrap($space-16);
     height: 11rem;
-    width: 19.438rem;
+    width: 100%;
+  }
+}
+
+
+@media (min-width: $breakpoint-tablet) {
+  .inputs {
+    gap: $space-24;
+    padding: 0;
+
+    &__tips {
+      &--option {
+        width: 8.813rem;
+      }
+    }
+
+    &__options {
+      height: 7rem;
+    }
   }
 }
