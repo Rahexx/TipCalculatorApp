@@ -14,6 +14,11 @@
     @include input-style($space-6 $space-18, end, $grey-50, $green-900);
     @include typography($green-900, $line-height-36, $font-bold, $text-24);
     border-radius: 0.313rem;
+    cursor: pointer;
+
+    &:hover, &:focus-visible{
+      outline: 2px solid $green-400;
+    }
   }
 
   &__container {
@@ -40,6 +45,13 @@
     &--option {
       @include button-option(3rem, 9.188rem, $green-900, $white, 0.313rem);
       @include typography($white, $line-height-36, $font-bold, $text-24);
+      cursor: pointer;
+      transition: background .5s ease-in-out, color .5s ease-in-out;
+
+      &:hover {
+        background: $green-200;
+        color: $green-900;
+      }
     }
 
     &--active {
