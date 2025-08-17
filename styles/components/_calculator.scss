@@ -15,4 +15,12 @@
         padding: $space-54 $space-75;
         border-radius: 1.563rem;
     }
+
+    @media(min-width: $breakpoint-desktop) {
+        flex-direction: row;
+        gap: $space-48;
+        height: 30.063rem; // 481px
+        width: 57.5rem; // 920px
+        padding: $space-32 $space-40;
+    }
 }
