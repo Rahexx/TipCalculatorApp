@@ -2,7 +2,7 @@
   @include flex-column($space-32);
   padding: 0 $space-8;
 
-  &__bill, &__people {
+  &__bill, &__people, &__tips {
     @include flex-column($space-8);
   }
 
@@ -40,8 +40,6 @@
   }
 
   &__tips {
-    @include flex-column;
-
     &--option {
       @include button-option(3rem, 9.188rem, $green-900, $white, 0.313rem);
       @include typography($white, $line-height-36, $font-bold, $text-24);
@@ -95,6 +93,24 @@
     &__tips {
       &--option {
         width: 8.813rem;
+      }
+    }
+
+    &__options {
+      height: 7rem;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .inputs {
+    gap: $space-40;
+    width: 23.688rem;
+    margin: $space-16 0;
+
+    &__tips {
+      &--option {
+        width: 7.22rem;
       }
     }
 
