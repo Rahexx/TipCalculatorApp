@@ -37,6 +37,7 @@
     &__reset {
         @include button-style(3rem, 100%, $green-400, $green-900, 0.3125rem);
         @include typography($green-900, $line-height-30, $font-bold, $text-20);
+        text-transform: uppercase;
     }
 }
 
@@ -64,3 +65,19 @@
 
     }
 }
+
+@media (min-width: $breakpoint-desktop) {
+    .preview {
+        height: 26.063rem;
+        width: 25.813rem;
+        padding: $space-37 $space-40;
+    
+        &__tip {
+            margin-bottom: $space-24;
+        }
+    
+        &__total {
+            margin-bottom: $space-128;
+        }
+    }
+  }
