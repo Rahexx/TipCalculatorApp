@@ -38,6 +38,11 @@
         @include button-style(3rem, 100%, $green-400, $green-900, 0.3125rem);
         @include typography($green-900, $line-height-30, $font-bold, $text-20);
         text-transform: uppercase;
+
+        &--hide {
+            background: $green-750;
+            color: $green-800;
+        }
     }
 }
 
