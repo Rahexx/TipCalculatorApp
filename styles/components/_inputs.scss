@@ -52,14 +52,14 @@
       }
     }
 
-    &--active {
-      background: $green-400;
-      color: $green-900;
-    }
-
     &--custom {
       background: $grey-50;
       color: $grey-500;
+    }
+
+    &--active {
+      background: $green-400;
+      color: $green-900;
     }
   }
 
