@@ -38,10 +38,21 @@
         @include button-style(3rem, 100%, $green-400, $green-900, 0.3125rem);
         @include typography($green-900, $line-height-30, $font-bold, $text-20);
         text-transform: uppercase;
+        cursor: pointer;
+        transition: background .3s ease-in-out;
+
+        &:hover {
+            background: $green-200;
+        }
 
         &--hide {
             background: $green-750;
             color: $green-800;
+
+            &:hover {
+                cursor: auto;
+                background: $green-750;
+            }
         }
     }
 }

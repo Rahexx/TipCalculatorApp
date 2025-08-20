@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const peopleSection = document.querySelector('.inputs__people');
     const billInput = document.querySelector('#inputs__bill---input');
     const resetButton = document.querySelector('.preview__reset');
+    const previewTip = document.querySelector('.preview__value--tip');
+    const previewBill = document.querySelector('.preview__value--total');
     let selectedTip = 0;
 
     function normalizeTipFromButton(button) {
@@ -37,8 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (value === 0) {
             peopleSection.classList.add('inputs__people--error');
-            document.querySelector('.preview__value--tip').textContent = '$0.00';
-            document.querySelector('.preview__value--total').textContent = '$0.00';
         } else {
             peopleSection.classList.remove('inputs__people--error');
         }
@@ -62,8 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function calculateTipAndTotal() {
-        const previewTip = document.querySelector('.preview__value--tip');
-        const previewBill = document.querySelector('.preview__value--total');
         const billValue = parseFloat(billInput.value) || 0;
         const peopleValue = parseInt(peopleInput.value) || 0;
         
@@ -79,4 +77,20 @@ document.addEventListener('DOMContentLoaded', function() {
             previewBill.textContent = `$${totalPerPerson.toFixed(2)}`;
         }
     }
+    
+    resetButton.addEventListener('click', function() {
+        billInput.value = 0;
+        peopleInput.value = 1;
+        
+        previewTip.textContent = '$0.00';
+        previewBill.textContent = '$0.00';
+                
+        tipButtons.forEach(btn => {
+            btn.classList.remove('inputs__tips--active');
+        });
+        document.querySelector('[data-tip="15"]').classList.add('inputs__tips--active');
+        selectedTip = 0.15;
+        
+        checkResetButtonState();
+    });
 });
