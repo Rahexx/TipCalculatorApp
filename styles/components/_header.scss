@@ -1,0 +1,9 @@
+.header {
+  display: flex;
+  justify-content: center;
+  margin: $space-50 0 $space-41;
+
+  @media(min-width: $breakpoint-desktop) {
+    margin: $space-163 0 $space-88;
+  }
+}

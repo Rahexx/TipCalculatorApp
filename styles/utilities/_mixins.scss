@@ -1,0 +1,73 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-column($gap: 0) {
+    display: flex;
+    flex-direction: column;
+    @if $gap > 0 {
+        gap: $gap;
+    }
+}
+
+@mixin flex-wrap($gap: 0) {
+    display: flex;
+    flex-wrap: wrap;
+    @if $gap > 0 {
+        gap: $gap;
+    }
+}
+
+@mixin typography($color, $line-height, $font-weight, $font-size) {
+    color: $color;
+    line-height: $line-height;
+    font-weight: $font-weight;
+    font-size: $font-size;
+}
+
+@mixin button-style($height, $width, $background, $color, $border-radius) {
+    @include flex-center;
+    height: $height;
+    width: $width;
+    background: $background;
+    color: $color;
+    border-radius: $border-radius;
+}
+
+@mixin section-style($height, $margin-bottom) {
+    height: $height;
+    @include flex-between;
+    margin-bottom: $margin-bottom;
+}
+
+@mixin input-style($padding, $text-align, $background, $color) {
+    height: 100%;
+    width: 100%;
+    padding: $padding;
+    text-align: $text-align;
+    background: $background;
+    color: $color;
+}
+
+@mixin button-option($height, $width, $background, $color, $border-radius) {
+    height: $height;
+    width: $width;
+    text-align: center;
+    background: $background;
+    border-radius: $border-radius;
+    color: $color;
+}
+
+@mixin absolute-position($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}

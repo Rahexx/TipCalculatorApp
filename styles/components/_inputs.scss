@@ -1,0 +1,121 @@
+.inputs {
+  @include flex-column($space-32);
+  padding: 0 $space-8;
+
+  &__bill, &__people, &__tips {
+    @include flex-column($space-8);
+  }
+
+  &__label {
+    @include typography($grey-500, $line-height-24, $font-bold, $text-16);
+  }
+
+  &__input {
+    @include input-style($space-6 $space-18, end, $grey-50, $green-900);
+    @include typography($green-900, $line-height-36, $font-bold, $text-24);
+    border-radius: 0.313rem;
+    cursor: pointer;
+
+    &:hover, &:focus-visible{
+      outline: 2px solid $green-400;
+    }
+  }
+
+  &__container {
+    position: relative;
+    height: 3rem;
+    width: 100%;
+  }
+
+  &__icon {
+    @include absolute-position($space-16, $space-18);
+  }
+
+  &__people--msg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    @include typography($orange-400, $line-height-24, $font-bold, $text-16);    
+  }
+
+  &__tips {
+    &--option {
+      @include button-option(3rem, 9.188rem, $green-900, $white, 0.313rem);
+      @include typography($white, $line-height-36, $font-bold, $text-24);
+      cursor: pointer;
+      transition: background .5s ease-in-out, color .5s ease-in-out;
+
+      &:hover {
+        background: $green-200;
+        color: $green-900;
+      }
+    }
+
+    &--custom {
+      background: $grey-50;
+      color: $grey-500;
+    }
+
+    &--active {
+      background: $green-400;
+      color: $green-900;
+    }
+  }
+
+  &__options {
+    @include flex-wrap($space-16);
+    height: 11rem;
+    width: 100%;
+  }
+
+  &__people {
+    position: relative;
+  }
+
+  &__people--error {
+    .inputs__people--msg {
+      display: inline-block;
+    }
+
+    .inputs__input {
+      outline: 2px solid $orange-400;
+    }
+  }
+}
+
+
+@media (min-width: $breakpoint-tablet) {
+  .inputs {
+    gap: $space-24;
+    padding: 0;
+
+    &__tips {
+      &--option {
+        width: 8.813rem;
+      }
+    }
+
+    &__options {
+      height: 7rem;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .inputs {
+    gap: $space-40;
+    width: 23.688rem;
+    margin: $space-16 0;
+
+    &__tips {
+      &--option {
+        width: 7.22rem;
+      }
+    }
+
+    &__options {
+      height: 7rem;
+    }
+  }
+}
