@@ -21,6 +21,9 @@ jobs:
       - name: Compile SCSS to CSS
         run: sass main.scss main.css --style=compressed
 
+      - name: List files before deploy
+        run: ls -Rla .
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
