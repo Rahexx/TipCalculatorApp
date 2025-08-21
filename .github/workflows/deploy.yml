@@ -19,7 +19,7 @@ jobs:
           npm install -g sass
 
       - name: Compile SCSS to CSS
-        run: sass main.scss main.css --style=compressed
+        run: sass main.scss index.css --style=compressed
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
